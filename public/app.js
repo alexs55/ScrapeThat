@@ -8,7 +8,7 @@ $.getJSON("/articles", function (data) {
     //   + "<br />" + "<a href='" + data[i].link + "' target='_blank'>"
     //   + data[i].link + "</a>" + "</p>" + "<br />");
 
-
+// created cards to display articles
     $("#articles").append("<div class='card'>"+
     "<div class='card-header' id='fun' data-id='" + data[i]._id + "'>"+
       data[i].title+
