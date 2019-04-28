@@ -69,7 +69,7 @@ app.get("/scrape", function (req, res) {
                 .attr("href");
 
             // Create a new Article using the `result` object built from scraping, upsert:true prevents duplicates
-            db.Article.create(result)
+            db.Article.updateOne(result,{$setOnInsert: { dateAdded: new Date() }},{upsert:true})
                 .then(function (dbArticle) {
                     // View the added result in the console
                     console.log(dbArticle);
