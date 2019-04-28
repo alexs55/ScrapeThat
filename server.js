@@ -68,7 +68,7 @@ app.get("/scrape", function (req, res) {
                 .children("a")
                 .attr("href");
 
-            // Create a new Article using the `result` object built from scraping
+            // Create a new Article using the `result` object built from scraping, upsert:true prevents duplicates
             db.Article.create(result)
                 .then(function (dbArticle) {
                     // View the added result in the console
