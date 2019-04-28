@@ -1,7 +1,7 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var db = require("./models");
+var db = require("./models/index.js");
 var app = express();
 var axios = require("axios");
 var cheerio = require("cheerio");
@@ -19,7 +19,7 @@ mongoose.connect(MONGODB_URI);
 
 // Require all models
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3004;
 
 // Initialize Express
 
