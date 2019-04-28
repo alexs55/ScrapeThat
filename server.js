@@ -18,7 +18,7 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 3004;
+var PORT = process.env.PORT || 3004;
 
 // Initialize Express
 var app = express();
@@ -31,12 +31,13 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
-app.use(express.static("public"));
+app.use(express.static("./public"));
 
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/kotaku", { useNewUrlParser: true });
 
 // Routes
+
 
 // A GET route for scraping the echoJS website
 app.get("/scrape", function (req, res) {
