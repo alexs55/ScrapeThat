@@ -15,17 +15,22 @@ padding-top: 5%;
 #articles {
 display: inline-block;
 overflow: auto;
+color: rgb(69, 24, 190);
 width: 60%;
 height: 700px;
+background-image: url("/images/banner1.jpg");
+background-size: cover;
 }
 #notes {
 float: right;
 width: 30%;
+
 }
 textarea, input {
 display: block;
 width: 100%;
-background-color: #FCF5C7;
+background-image: url("/images/banner1.jpg");
+background-size: cover;
 }
 input {
 height: 36px;
@@ -36,6 +41,6 @@ height: 200px;
 font-size: 18px;
 }
 .jumbotron{
-    background-image: url("/images/banner.jpg");
+    background-image: url("/images/banner1.jpg");
     background-size: cover;
 }
