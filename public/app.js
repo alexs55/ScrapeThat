@@ -14,7 +14,7 @@ $.getJSON("/articles", function (data) {
       data[i].title+
     "</div>"+
     "<div class='card-body'>"+
-    "<h5 class='card-title'>"+
+    "<h5 class='card-title' id= 'fun' data-id='"+ data[i]._id+"'>"+
     data[i].summary+
     "</h5>"+
     "<a href='"+ data[i].link+"' class='btn btn-primary' target='_blank'> Link to article</a>"+
